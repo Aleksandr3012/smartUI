@@ -1,0 +1,37 @@
+.top-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: rem(20) 0;
+
+	&__linkWrap {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		@include roww(#{rem(20)}, m);
+		@include media-breakpoint-up(sm) {
+			@include roww(#{rem(40)}, m);
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		font-size: $small;
+		font-weight: 700;
+		color: $white;
+
+		&:hover {
+			color: rgba($color: #fff, $alpha: 0.8);
+		}
+	}
+
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {}
+}
+
+

@@ -1,0 +1,33 @@
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js(type="button")
+			span
+		+e.inner
+			+mnu()
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row.align-items-center
+				.col-auto 
+					+e.logo(href="/")
+						+pic('logo(1).png','','')
+				.col 
+					+e.linkWrap 
+						+e.link.link-modal-js(href="#modal-logIn") LOG IN
+						+e.link.link-modal-js(href="#modal-signUp") SIGN UP
+				.col-auto
+					+b.toggle-menu-mobile--js(type="button")
+						span
+
+	// end top-nav
