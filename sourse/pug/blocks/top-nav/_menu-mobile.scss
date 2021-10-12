@@ -5,7 +5,7 @@ $h: em(2);
 	display: block;
 	height: $h* 12;
 	position: relative;
-	color: $primary;
+	color: $white;
 	font-size: 32px;
 	width: 1em;
 	cursor: pointer;
@@ -13,7 +13,7 @@ $h: em(2);
 	border: none;
 	
 	&.on {
-		color: #ffffff;
+		color: $white;
 	}
 
 	span:after,
