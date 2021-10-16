@@ -1,6 +1,20 @@
 // start .headerBlock
 .headerBlock {
+	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(25)};
+		--sPT: #{rem(92)};
+	}
+	@include media-breakpoint-up(xxl) {
+		// --sPT: #{rem(240)};
+		--sPB: #{rem(222)};
+	}
+	@include media-breakpoint-down(xxl) {
+	}
 	min-height: 100vh;
+
+	display: grid;
+	place-items: center;
+
 	position: relative;
 	padding-top: calc(var(--sPT) + var(--header-height));
 	text-align: center;
@@ -18,15 +32,37 @@
 	h1, .h1 {
 		text-transform: uppercase;
 		font-weight: bold;
+		line-height: 1.1;
+		letter-spacing: rem(5px);
 	}
 
 	h2, .h2 {
 		@extend .mono;
 		opacity: .7;
+		letter-spacing: rem(1.8px);
+		margin-bottom: 0;
+		line-height: 1.1;
+
 	}
 
 	&__btn {
-		margin-bottom: rem(40);
+		margin-bottom: rem(35);
+	}
+
+	p {
+		text-transform: uppercase;
+		// letter-spacing: rem(0.3px);
+		line-height: 1.25;
+
+		a {
+			color: #fff;
+			border-bottom: solid 1px;
+			font-weight: bold;
+
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
 	}
 
 	@include media-breakpoint-up(xs) {}

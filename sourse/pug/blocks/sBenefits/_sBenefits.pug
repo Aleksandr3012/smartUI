@@ -1,0 +1,16 @@
+mixin sBenefits(data)
+	// start sBenefits
+	+b.SECTION.sBenefits.section#sBenefits&attributes(attributes)
+		.container
+			.row.justify-content-center
+				mixin item(i, t)
+					.col-sm-6.col-lg-4
+						+e.item
+							+e.iconWrap
+								+pic(`benefits-${i}`)
+							+e.title= t
+							p Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.
+				+item('1','GET INSPIRED')
+				+item('2','GET REWARDED')
+				+item('3','GET SOCIAL')
+	// end sBenefits

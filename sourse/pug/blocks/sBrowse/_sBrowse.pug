@@ -1,0 +1,67 @@
+mixin sBrowse()
+	// start sBrowse
+	+b.SECTION.sBrowse.section#sBrowse&attributes(attributes)
+		.container-fluid
+			+b.section-title.text-center
+				h2 BROWSE BY CUISINES
+				
+			.grid
+				mixin col(data)
+					.g-col-6.g-col-xl-2
+						+e.item(href="#")
+							+pic(`item-${data.img}.jpg`)(class="picture-bg")
+							+e.txtWrap 
+								+e.quantity!= data.quantity
+									| &nbsp;Recipes
+								+e.title= data.title
+				+col({
+					img: '1',
+					quantity: '327',
+					title: 'ITALIAN'
+				})
+				+col({
+					img: '2',
+					quantity: '856',
+					title: 'INDIAN'
+				})
+				+col({
+					img: '3',
+					quantity: '27',
+					title: 'FRENCH'
+				})
+				+col({
+					img: '4',
+					quantity: '174',
+					title: 'STEAKHOUSE'
+				})
+				+col({
+					img: '5',
+					quantity: '731',
+					title: 'SEAFOOD'
+				})
+				+col({
+					img: '6',
+					quantity: '237',
+					title: 'SUSHI'
+				})
+				+col({
+					img: '7',
+					quantity: '529',
+					title: 'MEXICAN'
+				})
+				+col({
+					img: '8',
+					quantity: '145',
+					title: 'CHINESE'
+				})
+				+col({
+					img: '9',
+					quantity: '327',
+					title: 'PIZZA'
+				})
+				+col({
+					img: '10',
+					quantity: '1.437',
+					title: 'AMERICAN'
+				})
+	// end sBrowse

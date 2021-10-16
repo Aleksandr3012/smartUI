@@ -1,17 +1,33 @@
 
 mixin modal() 
 	//  start modals
-	a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
+	//- a(href="modal-call").link-modal-js modal-call 
+	div(id="modal-signUp"  style="display: none" )
 		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+			+form-wrap().text-center
+				+e.logo(href="/")
+					+pic('logo(1).png')
+				+e.title.form-data.ttu Sign-up
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
-	// #modal-call
+				+input("Username")(required)  
+				+input("Email",'email')(required)  
+				+input("password", 'password')(required)  
+				+e.BUTTON.btn.btn.btn-primary.ttu(type="submit") Sign Up
+				p.ttu if you alreary have an account 
+				+e.link.d-inline-block.ttu(href="#") sign up
+
+	div(id="modal-logIn"  style="display: none" )
+		+b.modal-win
+			+form-wrap().text-center
+				
+				+e.logo(href="/")
+					+pic('logo(1).png')
+				+e.title.form-data.ttu Log-in
+
+				+input("Username or email")(required)  
+				+input("password", 'password')(required)  
+				+e.BUTTON.btn.btn.btn-primary.ttu(type="submit") Log in
+				p.ttu.d-block don't have an account 
+					+e.SPAN.link(href="#") sign up
 	
 	// end modals

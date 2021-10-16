@@ -3,23 +3,31 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sBenefits/_sBenefits.pug
+include ../blocks/sApp/_sApp.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sBrowse/_sBrowse.pug
+include ../blocks/sNumbers/_sNumbers.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'title'
+	- let  title= 'FUDI'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sBenefits()
+	+sApp()
+	+sSlider()
+	+sBrowse()
+	+sNumbers()
 	+footer()
-      
+
 
 
 

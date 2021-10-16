@@ -1,0 +1,38 @@
+// start .sNumbers
+.sNumbers {
+
+	--sPT: #{rem(20)};
+	--sPB: #{rem(20)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(42)};
+		--sPB: #{rem(35)};
+	}
+	// --sTPB: ;
+
+	.row {
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(120)};
+		}
+	}
+
+	&__col {
+		padding-bottom: rem(20);
+	}
+
+	&__count {
+		letter-spacing: rem(1.8px);
+		@include rfs(36px);
+		font-weight: bold;
+	}
+
+	&__txt {
+		font-weight: 300;
+		letter-spacing: 0.8px;
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNumbers

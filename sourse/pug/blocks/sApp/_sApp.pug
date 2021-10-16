@@ -1,0 +1,22 @@
+mixin sApp(data)
+	// start sApp
+	+b.SECTION.sApp.section#sApp&attributes(attributes)
+		.container
+				
+			.row
+				.col-lg-6.sApp__txtCol
+					+b.section-title
+						h2 INTRODUCING THE FUDI APP
+					p Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet felis sit amet diam mollis ullamcorper. Nullam consequat sem a&nbsp;ante vest ibulum tristique. Suspendisse tristique lacus ac&nbsp;mattis porta. 
+					p Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In libero dui, eleifend eu&nbsp;nisi&nbsp;id, egestas fringilla odio. In&nbsp;varius quam a&nbsp;mas sa&nbsp;hendrerit ullamcorper a&nbsp;eu&nbsp;justo. Suspendisse porta mattis convallis. Aenean tempus ligula ac&nbsp;odio rhoncus, quis aliquam dolor accumsan. 
+					p Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam malesuada. Duis vehicula a&nbsp;nibh id&nbsp;hendrerit. Donec sit amet ultrices ante, a&nbsp;mattis massa.
+					+e.links 
+						a(href='#')
+							+pic('AppStore.png')
+						a(href='#')
+							+pic('GooglePlay.png')
+
+				.col-lg-6.order-lg-first.align-self-end
+					+e.imgWrap 
+						+pic('iphone.png')
+	// end sApp

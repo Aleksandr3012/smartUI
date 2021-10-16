@@ -1,18 +1,10 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js(type="button")
 			span
-		+e.inner
+		+e.inner.text-center
 			+mnu()
+			+e.tel(href="tel:+380979999999") +380 97 99 99 999
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -20,8 +12,8 @@ mixin top-nav()
 		.container
 			.row.align-items-center
 				.col-auto 
-					+e.logo(href="/")
-						+pic('logo(1).png','','')
+					a(href="/")
+						+pic('logo(1).png')
 				.col 
 					+e.linkWrap 
 						+e.link.link-modal-js(href="#modal-logIn") LOG IN

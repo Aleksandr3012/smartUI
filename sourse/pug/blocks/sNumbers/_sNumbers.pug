@@ -1,0 +1,17 @@
+mixin sNumbers(data)
+	// start sNumbers
+	+b.sNumbers.section#sNumbers&attributes(attributes)
+		.container
+				
+			.row.justify-content-center.countWrap--js
+				mixin col(n,t,i)
+					+e.col.col-6.col-lg-auto.text-center
+						+e.count(id=`count${i}--js`)= n
+						+e.txt= t
+				+col('23,567','Recipes Available','1')
+				+col('431,729','Active Users','2')
+				+col('892,173','Positive Reviews ','3')
+				+col('56,581','Photos & Videos','4')
+				+col('3,182','Spices and Herbs ','5')
+
+	// end sNumbers

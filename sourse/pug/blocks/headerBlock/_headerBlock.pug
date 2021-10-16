@@ -3,9 +3,11 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+pic('mainBg.jpg','','')(class="picture-bg")
 		.container.text-center
-			h2 Find your Favorite
-			h1 RECIPES
+			.section-title
+				h2 Find your Favorite
+				h1 RECIPES
 			+e.btn.btn.btn-outline-white.ttu(href='#') Get Started
 			p.ttu OR SEND US YOUR OWN RECIPES AND 
+				a(href="#") GET REWARDED!
 				
 	// end headerBlock

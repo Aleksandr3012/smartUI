@@ -1,0 +1,89 @@
+// start .sBrowse
+.sBrowse {
+
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(98)};
+	}
+	--sPB: 0;
+	// --sTPB: ;
+	--bs-gap: 0;
+	--bs-gutter-x: 0;
+
+	h2, .h2 {
+		font-size: rem(18);
+		font-weight: bold;
+		padding-bottom: rem(8);
+		position: relative;
+		letter-spacing: rem(0.9px);
+
+		&::before {
+			content: '';
+			@include a-cent(x);
+			bottom: 0;
+			max-width: rem(88);
+			width: 100%;
+			background: #f57365;
+			height: 1px;
+		}
+	}
+
+
+	&__item {
+		height: 100%;
+		padding: rem(10) 0 rem(32);
+		min-height: rem(225);
+		display: grid;
+		place-items: center;
+		position: relative;
+		text-align: center;
+		color: #fff !important;
+		overflow: hidden;
+
+		img {
+			@include mt;
+		}
+
+		&:hover {
+			img {
+				filter: grayscale(1);
+				// transform: scale(1.05);
+			}
+		}
+	}
+
+	&__quantity {
+		@extend .mono;
+		font-size: rem(15.5);
+		font-weight: bold;
+		line-height: 1.25;
+		letter-spacing: rem(0.7px);
+	}
+
+	&__title {
+		font-weight: bold;
+		@include rfs(30px);
+		@include media-breakpoint-up(xxl) {
+			@include rfs(36px);
+		}
+		line-height: 1.25;
+
+	}
+
+	.picture-bg img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.grid {
+		@include media-breakpoint-up(xl) {
+			grid-template-columns: repeat(var(--bs-columns,10),1fr);
+		}
+	}
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBrowse

@@ -1,0 +1,20 @@
+mixin sSlider(data)
+	// start sSlider
+	+b.sSlider.section#sSlider&attributes(attributes)
+		+pic('sliderBg.png')(class="picture-bg")
+		.container
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide 
+						.swiper-slide 
+							+e.slide
+								+e.imgWrap 
+									+pic('photo.png')
+								+e.txt “I am so happy because I found this recipe, and it just made my life easier.<br>Thanks  so much for sharing!”
+								+e.name - Michael Dawson, San Francisco, CA -
+
+					+slide
+					+slide
+					+slide
+			.swiper-pagination
+	// end sSlider

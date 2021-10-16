@@ -3,16 +3,22 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: rem(20) 0;
+	padding: rem(22) 0;
+
+	.row {
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(31)};
+		}
+	}
 
 	&__linkWrap {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 
-		@include roww(#{rem(20)}, m);
+		@include roww(#{rem(15)}, m);
 		@include media-breakpoint-up(sm) {
-			@include roww(#{rem(40)}, m);
+			@include roww(#{rem(26)}, m);
 		}
 	}
 
@@ -21,6 +27,7 @@
 		font-size: $small;
 		font-weight: 700;
 		color: $white;
+		letter-spacing: rem(0.7px);
 
 		&:hover {
 			color: rgba($color: #fff, $alpha: 0.8);

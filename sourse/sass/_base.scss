@@ -93,6 +93,8 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 	// display: flex;
 	// flex-direction: row; 
 // /	overflow: scroll;
@@ -183,10 +185,18 @@ body {
 .btn-outline-white {
 	border-color: $white;
 	color: $white;
+	border-width: rem(3);
+	letter-spacing: rem(0.45px);
+	font-weight: bold;
 
 	&:hover {
-		color: rgba($color: $white, $alpha: 0.8);
+		color: rgba($color: $white, $alpha: 0.7);
+		border-color: rgba($color: $white, $alpha: 0.7);
 	}
+}
+
+.btn-primary {
+	border-color: #33184b;
 }
 
 
