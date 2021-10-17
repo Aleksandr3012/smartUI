@@ -1,1 +1,1 @@
-1. <https://aleksandr3012.github.io/smartUi/public/>
+1. <https://aleksandr3012.github.io/smartUI/public/>
